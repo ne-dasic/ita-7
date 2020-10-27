@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+</head>
+<style>
+
+    
+    .circle2{
+        position: absolute;
+        background: black;
+        border-radius: 50%;
+        height: 80px;
+        width: 80px;
+        top: 50%;
+        left: 50%;
+        margin: -50px 0px 0px -50px;
+    }
+
+    .circlepuls{
+        position: absolute;
+        background: darkblue;
+        border-radius: 50%;
+        height: 80px;
+        width: 80px;
+        top: 50%;
+        left: 50%;
+        margin: -50px 0px 0px -50px;
+        opacity: 0;
+        animation: scaleIn 2s infinite cubic-bezier(.50, .36, .36, .30);
+    }
+
+    
+
+    .circle1{
+        background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        margin-top: 265px;
+        margin-left: 614px;
+        animation: rotate 5s linear infinite;
+        box-shadow:  0 0 20px  rgba(255, 0, 0, 0.6);
+    }
+    body{
+        background-color: black;
+    }
+    @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes scaleIn {
+        from {
+            transform: scale(.3, .3);
+            opacity: .7;
+        }
+        to {
+            transform: scale(1, 1);
+            opacity: 0.4;
+        }
+    }
+    
+</style>
+
+<body>
+
+<div align="center">
+
+  <div class="circle1"></div>
+  <div class="circle2"></div>
+  <div class="circlepuls"  style="animation-delay: 0s"></div>
+  <div class="circlepuls" style="animation-delay: 1.5s"></div>
+  <div class="circlepuls" style="animation-delay: 1.99s"></div>
+</div>    
+</body>
+</html>
